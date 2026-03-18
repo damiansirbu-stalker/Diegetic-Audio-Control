@@ -1,0 +1,24 @@
+--- _diegetic_audio_control_deps: Diegetic Audio Control dependency gate
+local assert = assert
+
+function on_game_start()
+    assert(xlog,
+        "\n\n! [Diegetic Audio Control] xlibs is not installed.\n"..
+        "! Diegetic Audio Control requires xlibs to function.\n"..
+        "! Install xlibs and restart the game.\n"..
+        "! https://www.moddb.com/mods/stalker-anomaly/addons/xlibs-1001\n"
+    )
+
+    assert(xlibs and xlibs.version,
+        "\n\n! [Diegetic Audio Control] xlibs is outdated (no version API).\n"..
+        "! Update xlibs and restart the game.\n"..
+        "! https://www.moddb.com/mods/stalker-anomaly/addons/xlibs-1001\n"
+    )
+
+    assert(xlibs.version() >= "1.0.0",
+        "\n\n! [Diegetic Audio Control] xlibs " .. (xlibs.version()) .. " is too old.\n"..
+        "! Diegetic Audio Control requires xlibs 1.0.0 or later.\n"..
+        "! Update xlibs and restart the game.\n"..
+        "! https://www.moddb.com/mods/stalker-anomaly/addons/xlibs-1001\n"
+    )
+end

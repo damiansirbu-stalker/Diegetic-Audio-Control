@@ -1,0 +1,82 @@
+--- diegetic_audio_control_mcm: MCM configuration for Diegetic Audio Control
+
+defaults = {
+    master_volume = 1.0,
+    radio_volume = 1.0,
+    radio_frequency = 1.0,
+    megaphone_volume = 1.0,
+    megaphone_frequency = 1.0,
+    guitar_volume = 1.0,
+    harmonica_volume = 1.0,
+    radio_enabled = true,
+    megaphone_enabled = true,
+    guitar_enabled = true,
+    harmonica_enabled = true,
+    debug_mode = false,
+}
+
+local path_builder = function(key) return "diegetic_audio_control/" .. key end
+get_config = xmcm.create_getter("diegetic_audio_control", defaults, path_builder)
+cfg = setmetatable({}, { __index = function(_, k) return get_config(k) end })
+
+function on_mcm_load()
+    local id = "diegetic_audio_control"
+    return {
+        id = id,
+        sh = true,
+        gr = {
+            {id = "title", type = "slide", link = "ui_options_slider_player",
+             text = "ui_mcm_diegetic_audio_title", size = {512, 50}, spacing = 20},
+
+            {id = "divider_master", type = "line"},
+            {id = "desc_master", type = "desc",
+             text = "ui_mcm_diegetic_audio_desc_master", clr = {255, 200, 200, 100}},
+            {id = "master_volume", type = "track",
+             val = 2, min = 0.1, max = 3.0, step = 0.1, def = 1.0},
+
+            {id = "divider_radio", type = "line"},
+            {id = "desc_radio", type = "desc",
+             text = "ui_mcm_diegetic_audio_desc_radio", clr = {255, 100, 200, 255}},
+            {id = "radio_enabled", type = "check", val = 1, def = true},
+            {id = "radio_volume", type = "track",
+             val = 2, min = 0.1, max = 5.0, step = 0.1, def = 1.0},
+            {id = "radio_frequency", type = "track",
+             val = 2, min = 0.25, max = 4.0, step = 0.25, def = 1.0},
+
+            {id = "divider_megaphone", type = "line"},
+            {id = "desc_megaphone", type = "desc",
+             text = "ui_mcm_diegetic_audio_desc_megaphone", clr = {255, 100, 200, 255}},
+            {id = "megaphone_enabled", type = "check", val = 1, def = true},
+            {id = "megaphone_volume", type = "track",
+             val = 2, min = 0.1, max = 5.0, step = 0.1, def = 1.0},
+            {id = "megaphone_frequency", type = "track",
+             val = 2, min = 0.25, max = 4.0, step = 0.25, def = 1.0},
+
+            {id = "divider_guitar", type = "line"},
+            {id = "desc_guitar", type = "desc",
+             text = "ui_mcm_diegetic_audio_desc_guitar", clr = {255, 100, 200, 255}},
+            {id = "guitar_enabled", type = "check", val = 1, def = true},
+            {id = "guitar_volume", type = "track",
+             val = 2, min = 0.1, max = 3.0, step = 0.1, def = 1.0},
+
+            {id = "divider_harmonica", type = "line"},
+            {id = "desc_harmonica", type = "desc",
+             text = "ui_mcm_diegetic_audio_desc_harmonica", clr = {255, 100, 200, 255}},
+            {id = "harmonica_enabled", type = "check", val = 1, def = true},
+            {id = "harmonica_volume", type = "track",
+             val = 2, min = 0.1, max = 3.0, step = 0.1, def = 1.0},
+
+            {id = "divider_debug", type = "line"},
+            {id = "desc_debug", type = "desc",
+             text = "ui_mcm_diegetic_audio_desc_debug", clr = {255, 200, 100, 100}},
+            {id = "debug_mode", type = "check", val = 1, def = false},
+
+            {id = "divider_footer", type = "line"},
+            {id = "footer", type = "desc",
+             text = "ui_mcm_diegetic_audio_footer", clr = {255, 150, 150, 150}},
+            {id = "div_version", type = "line"},
+            {id = "version", type = "desc",
+             text = "ui_mcm_diegetic_audio_version", clr = {255, 0, 206, 209}},
+        }
+    }
+end
