@@ -58,6 +58,9 @@ Tested with GAMMA. Hooks into ph_sound, guitar_anim, and harmonica_anim. If thos
 Credits:
 Stalker_Boss - Russian translation
 
+Grokitach, DrakoMT, and SaloEater for their support.
+Demonized, Catspaw, Vintar0, RavenAscendant, xcvb, lizzardman, Aoldri, and Feel_Fried. Their work on the engine, modded exes, scripts, and tools shaped how Anomaly modding is done.
+
 Development:
 Source: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 Releases: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/releases
