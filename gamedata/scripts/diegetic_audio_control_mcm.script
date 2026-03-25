@@ -1,5 +1,7 @@
 --- diegetic_audio_control_mcm: MCM configuration for Diegetic Audio Control
 
+local RegisterScriptCallback = RegisterScriptCallback
+
 defaults = {
     master_volume = 1.0,
     radio_volume = 1.0,
@@ -17,7 +19,15 @@ defaults = {
 
 local path_builder = function(key) return "diegetic_audio_control/" .. key end
 get_config = xmcm.create_getter("diegetic_audio_control", defaults, path_builder)
-cfg = setmetatable({}, { __index = function(_, k) return get_config(k) end })
+cfg = {}
+
+function load_config()
+    for k in pairs(defaults) do
+        cfg[k] = get_config(k)
+    end
+end
+
+load_config()
 
 function on_mcm_load()
     local id = "diegetic_audio_control"
@@ -79,4 +89,9 @@ function on_mcm_load()
              text = "ui_mcm_diegetic_audio_version", clr = {255, 0, 206, 209}},
         }
     }
+end
+
+function on_game_start()
+    load_config()
+    RegisterScriptCallback("on_option_change", load_config)
 end
