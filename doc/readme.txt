@@ -1,5 +1,6 @@
 Diegetic Audio Control: In-world volume control for STALKER Anomaly, by Damian
-Latest: 1.0.2 (xlibs 1.0.5)
+Latest: 1.0.3 (xlibs 1.2.0)
+GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 
 Anomaly has no way to control the volume of radios, megaphones, guitars, and harmonicas independently from the game's audio sliders. You can't turn down Duty propaganda without killing ambient sounds. Diegetic Audio Control fixes this.
 
@@ -55,24 +56,26 @@ All settings in MCM under Diegetic Audio Control. All defaults are 1.0 (unchange
 Compatibility:
 Tested with GAMMA. Hooks into ph_sound, guitar_anim, and harmonica_anim. If those mods are not present the relevant controls are inactive. No base script modifications.
 
+Development:
+Written against X-Ray Monolith engine source, Demonized exes source code, and Anomaly 1.5.3 unpacked gamedata.
+Code patterns and engine usage validated against established work by reputable GAMMA modders (Demonized, Vintar0, RavenAscendant, xcvb).
+The code is validated in real time by a multi-stage pipeline: luacheck, selene, tree-sitter AST analysis, contract rules, cross-file dependency resolution, cyclomatic complexity analysis, crash and vulnerability pattern detection, lua54 integration testing with X-Ray engine stubs, gitleaks secret scanning.
+Full report in doc/test-report.log.
+
 Credits:
 Stalker_Boss - Russian translation
 
 DrakoMT and SaloEater for their support.
 Demonized, Catspaw, Vintar0, RavenAscendant, xcvb, lizzardman, Aoldri, and Feel_Fried. Their work on the engine, modded exes, scripts, and tools shaped how Anomaly modding is done.
 
-Development:
-Source: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
-Releases: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/releases
-Written against X-Ray Monolith engine source, Demonized exes source code, and Anomaly 1.5.3 unpacked gamedata.
-Code patterns and engine usage validated against established work by reputable GAMMA modders (Demonized, Vintar0, RavenAscendant, xcvb).
-The code is validated in real time by a multi-stage pipeline: luacheck, selene, tree-sitter AST analysis, contract rules, cross-file dependency resolution, cyclomatic complexity analysis, crash and vulnerability pattern detection, lua54 integration testing with X-Ray engine stubs, gitleaks secret scanning.
-Full report in doc/test-report.log.
-
-License:
-MIT License. See LICENSE file.
-
 Versions:
+
+1.0.3
+  MCM snapshot pattern and performance improvements.
+  Changed: MCM configuration uses snapshot pattern (xmcm.create_config) for faster reads
+  Changed: MCM reset button support (mcm_option_restore_default callback)
+  Fixed: uncached engine globals (CreateTimeEvent, RegisterScriptCallback)
+  Changed: xlibs dependency updated to 1.2.0
 
 1.0.2
   Fixed: dependency gate uses exact version match instead of string comparison
