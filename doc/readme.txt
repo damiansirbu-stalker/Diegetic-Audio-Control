@@ -1,5 +1,5 @@
 Diegetic Audio Control: In-world volume control for STALKER Anomaly, by Damian
-Latest: 1.0.4 (xlibs 1.2.1)
+Latest: 1.0.5 (xlibs 1.2.3)
 GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 
 Anomaly has no way to control the volume of radios, megaphones, guitars, and harmonicas independently from the game's audio sliders. You can't turn down Duty propaganda without killing ambient sounds. Diegetic Audio Control fixes this.
@@ -71,6 +71,9 @@ Usage and License:
   Full license in LICENSE file and on GitHub.
 
 Versions:
+
+1.0.5
+  xlibs 1.2.3 dependency.
 
 1.0.4
   Changed: xlibs dependency updated to 1.2.1

@@ -1,5 +1,5 @@
 STALKER Mod Validation Report
-Generated: 2026-03-26 15:36:17
+Generated: 2026-03-30 16:36:58
 Validator: stalker-manager validate
 Mods: 1
 
@@ -23,7 +23,7 @@ Files:
   Errors: 0, Warnings: 0
 
 [3/5] contract - project rules (PASS (S+))
-  Rules loaded: 227
+  Rules loaded: 228
   Score: 0
 
   PASS  [alao-table-insert] LUA-LOW w1 - table.insert optimization
@@ -245,6 +245,7 @@ Files:
   PASS  [standards-loop-no-break] LUA-MED w5 - standards-loop-no-break
   PASS  [standards-while-true] LUA-HIGH w9 - standards-while-true
   PASS  [standards-nested-operations] LUA-LOW w1 - standards-nested-operations
+  PASS  [standards-raw-engine-call] XRAY-LOW w1 - standards-raw-engine-call
   PASS  [standards-no-throttle] XRAY-HIGH w9 - standards-no-throttle
   PASS  [standards-deprecated-api] LUA-MED w5 - standards-deprecated-api
   PASS  [standards-lua52-api] LUA-HIGH w9 - standards-lua52-api
@@ -257,41 +258,43 @@ Files:
 [4/5] load - runtime loading (PASS)
   Test: lua54 interpreter + X-Ray engine stubs
   Load test: Diegetic-Audio-Control
-  LOAD: xcreature
-  LOAD: xlevel
-  LOAD: xstring
-  LOAD: xdata
-  LOAD: _diegetic_audio_control_deps
-  LOAD: diegetic_audio_control_mcm
   LOAD: diegetic_audio_control
-  LOAD: xlog
-  LOAD: xinspect
-  LOAD: xttltable
   LOAD: xpda
-  LOAD: xlibs
-  LOAD: xtable
-  LOAD: xbus
-  LOAD: xsmart
-  LOAD: xstash
   LOAD: xlibs_mcm
+  LOAD: xstring
+  LOAD: xstash
+  LOAD: xtrace
+  LOAD: xbus
+  LOAD: xsquad
   LOAD: xobject
-  LOAD: xmcm
-  LOAD: xprofiler
+  LOAD: diegetic_audio_control_mcm
+  LOAD: xlevel
+  LOAD: xtime
+  LOAD: xinspect
+  LOAD: xsmart
+  LOAD: xtable
   LOAD: xmath
   LOAD: xconst
-  LOAD: xsquad
-  LOAD: xtrace
+  LOAD: xlog
+  LOAD: _diegetic_audio_control_deps
+  LOAD: xmcm
+  LOAD: xcreature
+  LOAD: xdata
   LOAD: xevent
-  START: _diegetic_audio_control_deps.on_game_start
+  LOAD: xprofiler
+  LOAD: xttltable
+  LOAD: xlibs
   START: diegetic_audio_control.on_game_start
+  START: _diegetic_audio_control_deps.on_game_start
+  START: xtime.on_game_start
   START: diegetic_audio_control_mcm.on_game_start
   START: xlog.on_game_start
-  OK: 25 loaded, 4 on_game_start
+  OK: 26 loaded, 5 on_game_start
 
 [5/5] gitleaks - secret scanning (PASS)
   Scan: credentials, API keys, tokens, private keys
-  3:36PM INF scanned ~41188 bytes (41.19 KB) in 104ms
-  3:36PM INF no leaks found
+  4:36PM INF scanned ~56251 bytes (56.25 KB) in 107ms
+  4:36PM INF no leaks found
 
 ========================================================================
 RESULT: PASS | Grade: S+ | Score: 0

@@ -1,0 +1,72 @@
+<h3>Latest: 1.0.4 (xlibs 1.2.1)</h3>
+<h3>GitHub: <a href="https://github.com/damiansirbu-stalker/Diegetic-Audio-Control">https://github.com/damiansirbu-stalker/Diegetic-Audio-Control</a></h3>
+<p>Anomaly has no way to control the volume of radios, megaphones, guitars, and harmonicas independently from the game's audio sliders. You can't turn down Duty propaganda without killing ambient sounds. Diegetic Audio Control fixes this.<br /><br />The mod hooks directly into the audio subsystems that play in-world sound: ph_sound for radios and megaphones, guitar_anim for campfire guitar, harmonica_anim for harmonica. Each source gets its own volume slider, enable/disable toggle, and where applicable a pause multiplier that controls silence between tracks or announcements.<br /><br />A master volume multiplier sits on top of everything. All changes apply immediately through MCM.<br /><br />Missing dependencies are handled gracefully. If you don't have the guitar or harmonica mods installed, those controls simply do nothing.<br /><br /></p>
+<h2>Features</h2>
+<h3>Radios</h3>
+<ul>
+<li>Volume control for faction base radios and music</li>
+<li>Pause multiplier between tracks (longer silence or shorter)</li>
+<li>Enable/disable toggle</li>
+</ul>
+<h3>Megaphones</h3>
+<ul>
+<li>Volume control for Duty propaganda, Arena announcer, alarms</li>
+<li>Pause multiplier between announcements</li>
+<li>Enable/disable toggle</li>
+</ul>
+<h3>Guitar</h3>
+<ul>
+<li>Volume control for campfire guitar (requires Guitar Animation mod)</li>
+<li>Enable/disable toggle</li>
+</ul>
+<h3>Harmonica</h3>
+<ul>
+<li>Volume control for harmonica (requires Harmonica mod)</li>
+<li>Enable/disable toggle</li>
+</ul>
+<p>Master volume multiplier applied to all sources<br /><br /></p>
+<h2>Requirements</h2>
+<p>Anomaly 1.5.3<br />Modded exes<br /><a href="https://www.moddb.com/mods/stalker-anomaly/addons/xlibs-1001">xlibs</a><br />MCM<br />Radio_Remastered or similar (for radio/megaphone control)<br />Guitar Animation by Daiviey (optional, for guitar control)<br />Harmonica by Daiviey (optional, for harmonica control)<br /><br /></p>
+<h2>Install (MO2)</h2>
+<p>1. Install xlibs<br />2. Install Diegetic Audio Control<br />3. Load order does not matter<br />4. Configure via MCM<br /><br />Uninstall: Disable or remove in MO2.<br /><br /></p>
+<h2>Configuration</h2>
+<p>All settings in MCM under Diegetic Audio Control. All defaults are 1.0 (unchanged from game behavior).<br /><br /></p>
+<h2>Compatibility</h2>
+<p>Tested with GAMMA. Hooks into ph_sound, guitar_anim, and harmonica_anim. If those mods are not present the relevant controls are inactive. No base script modifications.<br /><br /></p>
+<h2>Development</h2>
+<p>Written against X-Ray Monolith engine source, Demonized exes source code, and Anomaly 1.5.3 unpacked gamedata.<br />Code patterns and engine usage validated against established work by reputable GAMMA modders (Demonized, Vintar0, RavenAscendant, xcvb).<br />The code is validated in real time by a multi-stage pipeline: luacheck, selene, tree-sitter AST analysis, contract rules, cross-file dependency resolution, cyclomatic complexity analysis, crash and vulnerability pattern detection, lua54 integration testing with X-Ray engine stubs, gitleaks secret scanning.<br />Full report in doc/test-report.log.<br /><br /></p>
+<h2>Usage and License</h2>
+<p>Modpacks: allowed and encouraged. Keep the readme and license files.<br />Addons, patches, integrations: allowed. Credit "Diegetic Audio Control by Damian Sirbu" visibly on your mod page.<br />Full license in LICENSE file and on GitHub.<br /><br /></p>
+<p>Credits:<br />Stalker_Boss - Russian translation</p>
+<p></p>
+<h2>Versions</h2>
+<h3>1.0.4</h3>
+<ul>
+<li>Changed: xlibs dependency updated to 1.2.1</li>
+</ul>
+<h3>1.0.3</h3>
+<ul>
+<li>MCM snapshot pattern and performance improvements.</li>
+<li>Changed: MCM configuration uses snapshot pattern (xmcm.create_config) for faster reads</li>
+<li>Changed: MCM reset button support (mcm_option_restore_default callback)</li>
+<li>Fixed: uncached engine globals (CreateTimeEvent, RegisterScriptCallback)</li>
+<li>Changed: xlibs dependency updated to 1.2.0</li>
+</ul>
+<h3>1.0.2</h3>
+<ul>
+<li>Fixed: dependency gate uses exact version match instead of string comparison</li>
+</ul>
+<h3>1.0.1</h3>
+<ul>
+<li>Dependency gate and Russian translation.</li>
+<li>Added: dependency gate - clear error message if xlibs is missing or outdated</li>
+<li>Added: Russian translation (Stalker_Boss)</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>First release. Volume and pause control for radios, megaphones, guitar, harmonica.</li>
+<li>Added: per-source volume sliders with master multiplier</li>
+<li>Added: pause/frequency control for radios and megaphones</li>
+<li>Added: per-source enable/disable toggles</li>
+<li>Added: graceful handling of missing audio mods</li>
+</ul>
