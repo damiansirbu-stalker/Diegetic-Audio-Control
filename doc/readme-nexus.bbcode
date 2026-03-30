@@ -1,8 +1,5 @@
-[size=4][b]Diegetic Audio Control: In-world volume control for STALKER Anomaly[/b][/size]
-by Damian
-Latest: 1.0.4 (xlibs 1.2.1)
-
-[url=https://github.com/damiansirbu-stalker/Diegetic-Audio-Control]GitHub[/url]
+[size=3][b]Latest: 1.0.5 (xlibs 1.2.3)[/b][/size]
+[size=3][b]GitHub: [url=https://github.com/damiansirbu-stalker/Diegetic-Audio-Control]https://github.com/damiansirbu-stalker/Diegetic-Audio-Control[/url][/b][/size]
 
 Anomaly has no way to control the volume of radios, megaphones, guitars, and harmonicas independently from the game's audio sliders. You can't turn down Duty propaganda without killing ambient sounds. Diegetic Audio Control fixes this.
 
@@ -14,29 +11,29 @@ Missing dependencies are handled gracefully. If you don't have the guitar or har
 
 [line]
 
-[size=3][b]Features[/b][/size]
+[size=3][b]Features:[/b][/size]
 
-[size=2][b]Radios[/b][/size]
+[size=2][b]Radios:[/b][/size]
 [list]
 [*]Volume control for faction base radios and music
 [*]Pause multiplier between tracks (longer silence or shorter)
 [*]Enable/disable toggle
 [/list]
 
-[size=2][b]Megaphones[/b][/size]
+[size=2][b]Megaphones:[/b][/size]
 [list]
 [*]Volume control for Duty propaganda, Arena announcer, alarms
 [*]Pause multiplier between announcements
 [*]Enable/disable toggle
 [/list]
 
-[size=2][b]Guitar[/b][/size]
+[size=2][b]Guitar:[/b][/size]
 [list]
 [*]Volume control for campfire guitar (requires Guitar Animation mod)
 [*]Enable/disable toggle
 [/list]
 
-[size=2][b]Harmonica[/b][/size]
+[size=2][b]Harmonica:[/b][/size]
 [list]
 [*]Volume control for harmonica (requires Harmonica mod)
 [*]Enable/disable toggle
@@ -46,7 +43,7 @@ Master volume multiplier applied to all sources
 
 [line]
 
-[size=3][b]Requirements[/b][/size]
+[size=3][b]Requirements:[/b][/size]
 [list]
 [*]Anomaly 1.5.3
 [*]Modded exes
@@ -57,42 +54,53 @@ Master volume multiplier applied to all sources
 [*]Harmonica by Daiviey (optional, for harmonica control)
 [/list]
 
-[size=3][b]Install (MO2)[/b][/size]
-[list=1]
+[size=3][b]Install (MO2):[/b][/size]
+[list]
 [*]Install xlibs
 [*]Install Diegetic Audio Control
 [*]Load order does not matter
 [*]Configure via MCM
 [/list]
 
-[size=3][b]Uninstall (MO2)[/b][/size]
+[size=3][b]Uninstall (MO2):[/b][/size]
 Disable or remove in MO2.
 
-[size=3][b]Configuration[/b][/size]
+[line]
+
+[size=3][b]Configuration:[/b][/size]
 All settings in MCM under Diegetic Audio Control. All defaults are 1.0 (unchanged from game behavior).
 
-[size=3][b]Compatibility[/b][/size]
+[size=3][b]Compatibility:[/b][/size]
 Tested with GAMMA. Hooks into ph_sound, guitar_anim, and harmonica_anim. If those mods are not present the relevant controls are inactive. No base script modifications.
 
 [line]
 
-[size=3][b]Development[/b][/size]
+[size=3][b]Development:[/b][/size]
 Written against X-Ray Monolith engine source, Demonized exes source code, and Anomaly 1.5.3 unpacked gamedata.
 Code patterns and engine usage validated against established work by reputable GAMMA modders (Demonized, Vintar0, RavenAscendant, xcvb).
 The code is validated in real time by a multi-stage pipeline: luacheck, selene, tree-sitter AST analysis, contract rules, cross-file dependency resolution, cyclomatic complexity analysis, crash and vulnerability pattern detection, lua54 integration testing with X-Ray engine stubs, gitleaks secret scanning.
 Full report in doc/test-report.log.
 
-[size=3][b]Usage and License[/b][/size]
-Modpacks: allowed and encouraged. Keep the readme and license files.
-Addons, patches, integrations: allowed. Credit "Diegetic Audio Control by Damian Sirbu" visibly on your mod page.
-Full license in LICENSE file and on GitHub.
-
-[size=3][b]Credits[/b][/size]
+[size=3][b]Credits:[/b][/size]
 Stalker_Boss - Russian translation
 
 [line]
 
-[size=3][b]Versions[/b][/size]
+[size=3][b]Usage and License:[/b][/size]
+[list]
+[*]Modpacks: allowed and encouraged. Keep the readme and license files.
+[*]Addons, patches, integrations: allowed. Credit "Diegetic Audio Control by Damian Sirbu" visibly on your mod page.
+[*]Full license in LICENSE file and on GitHub.
+[/list]
+
+[line]
+
+[size=3][b]Versions:[/b][/size]
+
+[size=2][b]1.0.5[/b][/size]
+[list]
+[*]xlibs 1.2.3 dependency.
+[/list]
 
 [size=2][b]1.0.4[/b][/size]
 [list]
