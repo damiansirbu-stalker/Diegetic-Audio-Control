@@ -26,7 +26,7 @@ function on_mcm_load()
         id = id,
         sh = true,
         gr = {
-            {id = "title", type = "slide", link = "ui_options_slider_player",
+            {id = "title", type = "slide", link = "dac_mcm_banner",
              text = "ui_mcm_diegetic_audio_title", size = {512, 50}, spacing = 20},
 
             {id = "divider_master", type = "line"},
@@ -76,10 +76,15 @@ function on_mcm_load()
             {id = "footer", type = "desc",
              text = "ui_mcm_diegetic_audio_footer", clr = {255, 150, 150, 150}},
             {id = "div_version", type = "line"},
-            {id = "version", type = "desc",
-             text = "ui_mcm_diegetic_audio_version", clr = {255, 0, 206, 209}},
+            {id = "version", type = "desc", text = "ui_mcm_diegetic_audio_title",
+                ui_hook_functor = { diegetic_audio_control_mcm.set_version_text },
+                clr = {255, 0, 206, 209}},
         }
     }
+end
+
+function set_version_text(anchor, handlers)
+    handlers.desc:SetText(_diegetic_audio_control_deps.get_version())
 end
 
 function on_game_start()

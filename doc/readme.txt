@@ -1,6 +1,6 @@
 Diegetic Audio Control: In-world volume control for STALKER Anomaly, by Damian
-Latest: 1.0.5 (xlibs 1.2.3)
 GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
+Changelog: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog
 
 Anomaly has no way to control the volume of radios, megaphones, guitars, and harmonicas independently from the game's audio sliders. You can't turn down Duty propaganda without killing ambient sounds. Diegetic Audio Control fixes this.
 
@@ -69,33 +69,3 @@ Usage and License:
   Modpacks: allowed and encouraged. Keep the readme and license files.
   Addons, patches, integrations: allowed. Credit "Diegetic Audio Control by Damian Sirbu" visibly on your mod page.
   Full license in LICENSE file and on GitHub.
-
-Versions:
-
-1.0.5
-  xlibs 1.2.3 dependency.
-
-1.0.4
-  Changed: xlibs dependency updated to 1.2.1
-
-1.0.3
-  MCM snapshot pattern and performance improvements.
-  Changed: MCM configuration uses snapshot pattern (xmcm.create_config) for faster reads
-  Changed: MCM reset button support (mcm_option_restore_default callback)
-  Fixed: uncached engine globals (CreateTimeEvent, RegisterScriptCallback)
-  Changed: xlibs dependency updated to 1.2.0
-
-1.0.2
-  Fixed: dependency gate uses exact version match instead of string comparison
-
-1.0.1
-  Dependency gate and Russian translation.
-  Added: dependency gate - clear error message if xlibs is missing or outdated
-  Added: Russian translation (Stalker_Boss)
-
-1.0.0
-  First release. Volume and pause control for radios, megaphones, guitar, harmonica.
-  Added: per-source volume sliders with master multiplier
-  Added: pause/frequency control for radios and megaphones
-  Added: per-source enable/disable toggles
-  Added: graceful handling of missing audio mods

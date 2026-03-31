@@ -67,9 +67,6 @@
         <text>Debug Mode</text>
     </string>
 
-    <string id="ui_mcm_diegetic_audio_version">
-        <text>%c[d_cyan]1.0.5</text>
-    </string>
 
     <string id="ui_mcm_diegetic_audio_footer">
         <text>Volume boost above 2x may have diminishing effect due to engine limits</text>
