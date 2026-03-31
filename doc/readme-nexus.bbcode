@@ -1,5 +1,5 @@
-[size=3][b]Latest: 1.0.5 (xlibs 1.2.3)[/b][/size]
 [size=3][b]GitHub: [url=https://github.com/damiansirbu-stalker/Diegetic-Audio-Control]https://github.com/damiansirbu-stalker/Diegetic-Audio-Control[/url][/b][/size]
+[size=3][b]Changelog: [url=https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog]doc/changelog[/url][/b][/size]
 
 Anomaly has no way to control the volume of radios, megaphones, guitars, and harmonicas independently from the game's audio sliders. You can't turn down Duty propaganda without killing ambient sounds. Diegetic Audio Control fixes this.
 
@@ -95,44 +95,3 @@ Stalker_Boss - Russian translation
 
 [line]
 
-[size=3][b]Versions:[/b][/size]
-
-[size=2][b]1.0.5[/b][/size]
-[list]
-[*]xlibs 1.2.3 dependency.
-[/list]
-
-[size=2][b]1.0.4[/b][/size]
-[list]
-[*]Changed: xlibs dependency updated to 1.2.1
-[/list]
-
-[size=2][b]1.0.3[/b][/size]
-[list]
-[*]MCM snapshot pattern and performance improvements.
-[*]Changed: MCM configuration uses snapshot pattern (xmcm.create_config) for faster reads
-[*]Changed: MCM reset button support (mcm_option_restore_default callback)
-[*]Fixed: uncached engine globals (CreateTimeEvent, RegisterScriptCallback)
-[*]Changed: xlibs dependency updated to 1.2.0
-[/list]
-
-[size=2][b]1.0.2[/b][/size]
-[list]
-[*]Fixed: dependency gate uses exact version match instead of string comparison
-[/list]
-
-[size=2][b]1.0.1[/b][/size]
-[list]
-[*]Dependency gate and Russian translation.
-[*]Added: dependency gate - clear error message if xlibs is missing or outdated
-[*]Added: Russian translation (Stalker_Boss)
-[/list]
-
-[size=2][b]1.0.0[/b][/size]
-[list]
-[*]First release. Volume and pause control for radios, megaphones, guitar, harmonica.
-[*]Added: per-source volume sliders with master multiplier
-[*]Added: pause/frequency control for radios and megaphones
-[*]Added: per-source enable/disable toggles
-[*]Added: graceful handling of missing audio mods
-[/list]

@@ -153,6 +153,7 @@ end
 
 function on_game_start()
     load_settings()
+    log.info("Diegetic Audio Control v%s (xlibs v%s)", _diegetic_audio_control_deps.get_version(), xlibs.get_version())
 
     local ph_ok, guitar_ok, harmonica_ok = install_hooks()
     RegisterScriptCallback("on_option_change", on_mcm_changed)
