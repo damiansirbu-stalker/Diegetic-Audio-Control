@@ -1,9 +1,9 @@
 --- diegetic_audio_control: Volume/frequency control for radios, megaphones, guitar, harmonica
 
 local tostring, math, table = tostring, math, table
-local CreateTimeEvent, RegisterScriptCallback = CreateTimeEvent, RegisterScriptCallback
+local RegisterScriptCallback = RegisterScriptCallback
 
-local log = xlog.get_logger("DIEGETIC")
+local log = xlog.get_logger("DIEGETIC", { outfile = "diegetic.log" })
 
 local cfg = nil
 
