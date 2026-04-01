@@ -1,7 +1,6 @@
 next
-  Added: MCM banner
   Added: version logged at startup (mod + xlibs)
-  Changed: MCM version displayed from code, no longer hardcoded in XML
+  Changed: MCM refresh (banner, version from code, cream version color)
   Fixed: Russian MCM encoding (windows-1251)
 
 1.0.5

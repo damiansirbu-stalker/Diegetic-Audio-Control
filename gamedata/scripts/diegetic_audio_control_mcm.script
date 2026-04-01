@@ -78,7 +78,7 @@ function on_mcm_load()
             {id = "div_version", type = "line"},
             {id = "version", type = "desc", text = "ui_mcm_diegetic_audio_title",
                 ui_hook_functor = { diegetic_audio_control_mcm.set_version_text },
-                clr = {255, 0, 206, 209}},
+                clr = {255, 212, 201, 168}},
         }
     }
 end
