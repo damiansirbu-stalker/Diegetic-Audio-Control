@@ -68,4 +68,5 @@ Stalker_Boss - Russian translation
 Usage and License:
   Modpacks: allowed and encouraged. Keep the readme and license files.
   Addons, patches, integrations: allowed. Credit "Diegetic Audio Control by Damian Sirbu" visibly on your mod page.
+  Reproducing the implementation in other software: not allowed, even with credit.
   Full license in LICENSE file and on GitHub.
