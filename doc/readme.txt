@@ -54,6 +54,7 @@ Configuration:
 All settings in MCM under Diegetic Audio Control. All defaults are 1.0 (unchanged from game behavior).
 
 Compatibility:
+Compatible with all modded exe variants (Demonized, AOE, MT).
 Tested with GAMMA. Hooks into ph_sound, guitar_anim, and harmonica_anim. If those mods are not present the relevant controls are inactive. No base script modifications.
 
 Development:
@@ -64,6 +65,7 @@ Full report in doc/test-report.log.
 
 Credits:
 Stalker_Boss - Russian translation
+Altogolik - support, ideas, source materials
 
 Usage and License:
   Modpacks: allowed and encouraged. Keep the readme and license files.
