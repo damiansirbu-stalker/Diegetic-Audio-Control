@@ -1,5 +1,9 @@
 next
 
+1.0.8
+  Compatibility:
+    Removed: modded exes requirement. Works with vanilla Anomaly 1.5.3, Demonized, Demonized MT, AOEngine. Tested with GAMMA, EFP, Zona.
+
 1.0.7
   Changed: xlibs 1.2.5 dependency.
 

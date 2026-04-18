@@ -35,7 +35,6 @@ Master volume multiplier applied to all sources
 
 Requirements:
 Anomaly 1.5.3
-Modded exes
 xlibs (https://www.moddb.com/mods/stalker-anomaly/addons/xlibs-1001)
 MCM
 Radio_Remastered or similar (for radio/megaphone control)
@@ -55,7 +54,7 @@ Configuration:
 All settings in MCM under Diegetic Audio Control. All defaults are 1.0 (unchanged from game behavior).
 
 Compatibility:
-Compatible with all modded exe variants (Demonized, AOE, MT).
+Tested with vanilla Anomaly 1.5.3, Demonized main, Demonized MT, and AOEngine (latest versions).
 Tested with GAMMA. Hooks into ph_sound, guitar_anim, and harmonica_anim. If those mods are not present the relevant controls are inactive. No base script modifications.
 
 Development:
